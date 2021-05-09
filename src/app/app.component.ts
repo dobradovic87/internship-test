@@ -1,4 +1,14 @@
 import { Component } from '@angular/core';
+import groupData  from '../assets/data.json';
+
+interface Group {
+  id: number;
+  firstName: string;
+  surname: string;
+  age: number;
+  gender: string;
+  friends: number[];
+}
 
 @Component({
   selector: 'app-root',
@@ -7,4 +17,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'internship-test';
+  data: Group[] = groupData;
 }
